@@ -1,12 +1,17 @@
 console.log("********************** Simple Calculator *************************");
 
-const prompt = require("prompt-sync")(); // <-- Input support added here
+const prompt = require("prompt-sync")(); 
 
-let a = 10;
-let b = 20;
+// ask for numbers instead of hardcoding
+const a = Number(prompt("Enter first number: "));
+const b = Number(prompt("Enter second number: "));
 
-console.log("Enter the operation you want to perform (addition, subtraction, multiplication, division): ");
-const operation = prompt("> "); // <-- Input here
+if (Number.isNaN(a) || Number.isNaN(b)) {
+    console.log("Bro... enter valid numbers.");
+    process.exit(1);
+}
+
+const operation = prompt("Enter operation (add, sub, mul, div): ").toLowerCase();
 
 switch (operation) {
     case "add":
@@ -37,4 +42,4 @@ switch (operation) {
         console.log("Invalid operation.");
 }
 
-console.log("Thank you!");
+console.log("Thank you!");
