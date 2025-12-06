@@ -42,4 +42,4 @@ switch (operation) {
         console.log("Invalid operation.");
 }
 
-console.log("Thank you!");
+console.log("Thank you!");
