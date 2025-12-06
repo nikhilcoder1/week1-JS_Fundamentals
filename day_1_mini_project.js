@@ -2,8 +2,11 @@ console.log("********************** Simple Calculator *************************"
 
 const prompt = require("prompt-sync")(); // <-- Input support added here
 
-let a = 10;
-let b = 20;
+console.log("Enter the first number :")
+const a = parseInt(prompt("> "));
+
+console.log("Enter the second number :")
+const b = parseInt(prompt("> "));
 
 console.log("Enter the operation you want to perform (addition, subtraction, multiplication, division): ");
 const operation = prompt("> "); // <-- Input here
