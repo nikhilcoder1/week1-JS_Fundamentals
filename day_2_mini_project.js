@@ -1,6 +1,7 @@
 console.log("********************** BMI Calculator *************************");
 
-const prompt = require("prompt-sync")();
+const makePrompt = require("prompt-sync")
+const prompt = makePrompt();
 
 // weight in kg, height in meters
 const weight = Number(prompt("Enter weight (kg): "));
