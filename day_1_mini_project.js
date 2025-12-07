@@ -1,6 +1,7 @@
 console.log("********************** Simple Calculator *************************");
 
-const prompt = require("prompt-sync")(); 
+import makePrompt from "prompt-sync";
+const prompt = makePrompt();
 
 // ask for numbers instead of hardcoding
 const a = Number(prompt("Enter first number: "));
