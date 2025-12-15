@@ -1,13 +1,21 @@
-console.log("********************** Student Marks Analyzer *************************");
-
-import makePrompt from "prompt-sync";
+import makePrompt from "prompt-sync"
 const prompt = makePrompt();
 
-const numberOfStudents = Number(prompt("Enter the number of students : "));
+console.log("********************** Student Marks Analyzer *************************");
 
-if(!Number.isInteger(numberOfStudents) || numberOfStudents <= 0){
-    console.log("Enter a valid positive integer for the number of students.")
-    process.exit(1);
+const students = new Array(5)
+
+console.log("Enter the marks of 5 students : ");
+for(let i=0;i<students.length;i++){
+  students[i] = Number(prompt(`Enter student ${i+1} marks : `))
 }
 
-const students = new Array(numberOfStudents);
+const total = students.reduce((sum,n) => sum+n,0)
+const avg = (total / students.length)
+const highest = Math.max(...students)
+const lowest = Math.min(...students)
+
+console.log(`Total marks : ${total}`)
+console.log(`Average marks : ${avg}`)
+console.log(`Highest marks : ${highest}`)
+console.log(`Lowest marks : ${lowest}`)
