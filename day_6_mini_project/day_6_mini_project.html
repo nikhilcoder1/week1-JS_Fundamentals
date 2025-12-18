@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Digital Clock UI</title>
     <link rel="stylesheet" href="./day_6_mini_project.css">
-
 </head>
 
 <body>
     <h1>Digital Clock UI</h1>
 
-    <div id="clock"></div>
+    <div id="clock" role="timer" aria-live="polite">
+        <span id="time">00:00:00</span>
+    </div>
+
+    <!-- Audio -->
+    <audio id="tickSound" src="./slow-cinematic-clock-ticking-357979.mp3" preload="auto"></audio>
 
     <script src="./day_6_mini_project.js"></script>
 </body>
-
 </html>
