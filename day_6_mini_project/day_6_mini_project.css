@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    color: white;
+    background-color: #1a1a1a;
+}
+
+h1{
+    text-align: center;
+    margin: 100px;
+    color: aqua;
+    text-decoration: underline;
+}
+
+#clock{
+    background-color: #2b2b2b;
+    width: 50%;
+    margin: 0 auto;
+    height: 150px;
+    display: flex;
+    justify-content : center;
+    align-items : center;
+    border: 10px solid #3c3c3c;
+    border-radius: 20px;   
+}
