@@ -3,15 +3,30 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validator</title>
-
+    <link rel="stylesheet" href="./day_7_mini_project.css">
 </head>
 
 <body>
-    
+
+    <div class="container">
+        <form id="signupForm">
+            <input type="text" id="username" placeholder="Username" />
+            <span class="error" id="usernameError"></span>
+
+            <input type="email" id="email" placeholder="Email" />
+            <span class="error" id="emailError"></span>
+
+            <input type="password" id="password" placeholder="Password" />
+            <span class="error" id="passwordError"></span>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="./day_7_mini_project.js"></script>
 </body>
 
 </html>
