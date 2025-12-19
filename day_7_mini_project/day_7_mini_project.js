@@ -1,10 +1,11 @@
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+const form = document.getElementById("signupForm")
 
-  if (input.value === "") {
-    error.textContent = "Field is required";
-  } else {
-    error.textContent = "";
-    console.log("Form submitted");
-  }
-});
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let isValid = true;
+
+    // Username validation
+
+    
+})
