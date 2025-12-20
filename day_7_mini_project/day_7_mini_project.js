@@ -6,6 +6,11 @@ form.addEventListener("submit", (e) => {
     let isValid = true;
 
     // Username validation
+    const length = document.getElementById("username").value().trim();
 
+    if(length == ""){
+        console.log("Enter the username")
+    }
+    
     
 })
