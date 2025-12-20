@@ -6,11 +6,38 @@ form.addEventListener("submit", (e) => {
     let isValid = true;
 
     // Username validation
-    const length = document.getElementById("username").value().trim();
+    const username = document.getElementById("username").value.trim();
 
-    if(length == ""){
-        console.log("Enter the username")
+    if(username === ""){
+        showError("usernameError","Username is required!");
+        isValid = false;
+    }else{
+        clearError("usernameError");
     }
-    
+
+    // Email validation
+    const email = document.getElementById("email").value.trim()
+
+    if(!isValidateEmail(email)){
+        showError("emailError","Invalid email address!");
+        isValid = false;
+    }else{
+        clearError("emailError")
+    }
+
+    // Password Validation
+    const password = document.getElementById("password").value;
+
+    if(password.length<6){
+        showError("passwordError","Password must be of atleast 6 characters!")
+        isValid = false
+    }else{
+        clearError("passwordError")
+    }
+
+    if (isValid) {
+        alert("Form submitted successfully 🚀");
+        form.reset();
+    } 
     
 })
