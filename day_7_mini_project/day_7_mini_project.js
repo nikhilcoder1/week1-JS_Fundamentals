@@ -18,7 +18,7 @@ form.addEventListener("submit", (e) => {
     // Email validation
     const email = document.getElementById("email").value.trim()
 
-    if(!isValidateEmail(email)){
+    if(!validateEmail(email)){
         showError("emailError","Invalid email address!");
         isValid = false;
     }else{
