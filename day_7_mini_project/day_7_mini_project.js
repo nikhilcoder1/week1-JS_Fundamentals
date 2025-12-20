@@ -40,4 +40,19 @@ form.addEventListener("submit", (e) => {
         form.reset();
     } 
     
+
+    // Helper functions 
+
+    function showError(id , message){
+        document.getElementById(id).innerText = message;
+    }
+
+    function clearError(id) {
+        document.getElementById(id).innerText = "";
+    }
+
+    function validateEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
 })
