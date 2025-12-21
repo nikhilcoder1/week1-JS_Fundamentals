@@ -37,7 +37,7 @@ form.addEventListener("submit", (e) => {
 
     if (isValid) {
         alert("Form submitted successfully 🚀");
-        form.reset();
+        form.submit();
     } 
     
 
